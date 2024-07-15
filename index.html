@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonbucks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="pagee">
+        <div id="searchpage">
+            <div id="srchpanel">
+               <img id="cup" src="Resources\toast.gif" alt="Search">
+                <input onchange="search()" type="text" id="srch" placeholder="Looking for something specific?">
+            </div>
+            <img id="fav" src="Resources/favdr.png" alt="">
+        </div>
+        <div id="drinkscontainer"></div>
+    </div>
+
+    <!-- Modal for item display -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closemodal" class="close">&times;</span>
+            <img src="favorite.png" alt="" class="hover-image"
+            id="favbtn" 
+            onclick="this.src='favourite.png'" 
+            onmouseout="this.src='favorite.png'">
+            <h1 id="drname"></h1>
+            <img id="drimg" alt="">
+            <h2>Ingredients</h2>
+            <div id="dring"></div>
+            <h2>Recipe</h2>
+            <select onchange="singledisplay()" id="drrecsel">
+                <option value="">Eng</option>
+                <option value="ES">ES</option>
+                <option value="DE">DE</option>
+                <option value="FR">FR</option>
+                <option value="IT">IT</option>
+                <option value="ZH-HANS">ZH-HANS</option>
+                <option value="ZH-HANT">ZH-HANT</option>
+            </select>
+            <p id="drrec"></p>
+        </div>
+    </div>
+
+    <!-- Dialog for favorite items -->
+    <dialog id="favitem">
+        <h3>Your Favorites:</h3>
+        <div id="favlist"></div>
+        <img id="closefav" src="Resources/cross.png" alt="">
+    </dialog>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+#pagee {
+    padding: 20px;
+}
+
+#searchpage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #00796b;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#srchpanel {
+    display: flex;
+    align-items: center;
+}
+
+#srch {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    width: 300px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#srch:focus {
+    outline: none;
+}
+
+#cup {
+    height: 40px;
+    cursor: pointer;
+}
+
+#fav {
+    height: 40px;
+    cursor: pointer;
+}
+
+#drinkscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.drink-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.drink-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.drink-image {
+    width: 100%;
+    height: 200px;
+}
+
+.drink-name {
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 20%;
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #00796b;
+    margin-top: 30px;
+}
+
+.hover-image {
+    margin-top: 30px;
+    margin-left: 3px;
+    width: 40px;
+    cursor: pointer;
+    display: block;
+}
+
+#drname {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#drimg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #00796b;
+    margin-top: 20px;
+}
+
+#drrecsel {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#favitem {
+    width: 60%;
+    border: 2px solid #00796b;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff8e7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#favitem h3 {
+    margin: 0 0 20px 0;
+    color: #00796b;
+    font-family: 'Arial', sans-serif;
+}
+
+#favlist {
+    color: #00796b;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.fav-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fav-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.fav-name {
+    flex-grow: 1;
+    color: #333;
+    font-family: 'poppins';
+    font-size: 30px;
+}
+
+.remove-btn {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'poppins';
+    font-size: 20px;
+}
+
+.remove-btn:hover {
+    background-color: #e63900;
+}
+
+#favbtn {
+    transition: transform 0.2s ease-in-out;
+}
+
+#favbtn:hover {
+    transform: scale(1.1);
+}
+
+#closefav {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    #searchpage {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #srch {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    #favitem {
+        width: 80%;
+    }
+
+    .drink-item {
+        width: 45%;
+    }
+
+    .fav-name {
+        font-size: 24px;
+    }
+
+    .remove-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #searchpage {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #srch {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    #favitem {
+        width: 90%;
+    }
+
+    .drink-item {
+        width: 100%;
+    }
+
+    .fav-name {
+        font-size: 18px;
+    }
+
+    .remove-btn {
+        font-size: 14px;
+    }
+}
